@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPT: Küberturvalisus</title>
+    <style>
+        /* --- ÜLDINE DISAIN (CSS) --- */
+        :root {
+            --bg-color: #0d1117; /* Tume taust */
+            --card-bg: #161b22;   /* Sektsioonide taust */
+            --text-main: #c9d1d9; /* Hele tekst */
+            --accent: #2ea043;    /* Roheline (Küber/Hacker stiil) */
+            --accent-hover: #3fb950;
+            --border: #30363d;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* --- PÄIS JA MENÜÜ --- */
+        header {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border);
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+
+        h1 {
+            color: var(--accent);
+            margin: 0;
+            font-family: 'Courier New', Courier, monospace; /* Terminali stiil */
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            font-size: 0.9em;
+            color: #8b949e;
+            margin-top: 5px;
+        }
+
+        nav {
+            background-color: #010409;
+            padding: 10px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--border);
+        }
+
+        nav a {
+            color: var(--text-main);
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        /* --- SISU KASTID --- */
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+
+        h2 {
+            color: var(--accent);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        h3 {
+            color: #ffffff;
+            margin-top: 25px;
+        }
+
+        /* --- PLACEHOLDERID (Täidetavad alad) --- */
+        .fill-in {
+            background-color: rgba(46, 160, 67, 0.1); /* Õrn roheline taust */
+            border-left: 4px solid var(--accent);
+            padding: 15px;
+            margin: 10px 0;
+            font-style: italic;
+            color: #8b949e;
+        }
+
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        /* --- JALUS --- */
+        footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 0.8em;
+            color: #8b949e;
+            border-top: 1px solid var(--border);
+            background-color: var(--card-bg);
+        }
+
+        /* --- RESPONSIVE (Mobiilivaade) --- */
+        @media (max-width: 600px) {
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Uurimistöö: Küberturvalisus</h1>
+        <div class="subtitle">
+            Autor: [SINU NIMI] | Juhendaja: [JUHENDAJA NIMI] | [AASTA]
+        </div>
+    </header>
+
+    <nav>
+        <a href="#sissejuhatus">Sissejuhatus</a>
+        <a href="#teooria">Teooria</a>
+        <a href="#ohud">Ohud</a>
+        <a href="#kaitse">Kaitse</a>
+        <a href="#kokkuvote">Kokkuvõte</a>
+    </nav>
+
+    <div class="container">
+
+        <section id="sissejuhatus">
+            <h2>1. Sissejuhatus</h2>
+            <div class="fill-in">
+                [KIRJUTA SIIA: Miks sa valisid selle teema? Mis on töö eesmärk? Keda see teema puudutab? Näiteks: "Valisin selle teema, kuna küberrünnakud on sagenenud..."]
+            </div>
+        </section>
