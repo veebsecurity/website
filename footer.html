@@ -1,0 +1,56 @@
+<!-- _includes/footer.html -->
+<footer class="site-footer">
+  <div class="container footer-container">
+
+    <!-- Brand column -->
+    <div class="footer-brand">
+      <a class="footer-logo" href="{{ '/' | relative_url }}">
+        <span class="logo-shield" aria-hidden="true">&#x2756;</span>
+        <span>{{ site.title }}</span>
+      </a>
+      <p class="footer-tagline">{{ site.tagline }}</p>
+      <p class="footer-note">
+        Security isn&rsquo;t paranoia&mdash;it&rsquo;s a habit anyone can build.
+      </p>
+    </div>
+
+    <!-- Quick links -->
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <h3 class="footer-heading">Explore</h3>
+      <ul role="list">
+        {% for link in site.nav_links %}
+        <li><a href="{{ link.url | relative_url }}">{{ link.title }}</a></li>
+        {% endfor %}
+        <li><a href="{{ '/tools/' | relative_url }}">Tools Directory</a></li>
+      </ul>
+    </nav>
+
+    <!-- Categories quick links -->
+    <div class="footer-categories">
+      <h3 class="footer-heading">Topics</h3>
+      <ul role="list">
+        <li><a href="{{ '/blog/' | relative_url }}#passwords">Passwords</a></li>
+        <li><a href="{{ '/blog/' | relative_url }}#phishing">Phishing</a></li>
+        <li><a href="{{ '/blog/' | relative_url }}#updates">Software Updates</a></li>
+        <li><a href="{{ '/blog/' | relative_url }}#wifi">Wi-Fi Safety</a></li>
+        <li><a href="{{ '/blog/' | relative_url }}#backups">Backups</a></li>
+        <li><a href="{{ '/blog/' | relative_url }}#two-factor">Two-Factor Auth</a></li>
+      </ul>
+    </div>
+
+    <!-- Disclaimer / trust signal -->
+    <div class="footer-disclaimer">
+      <h3 class="footer-heading">A note on trust</h3>
+      <p>
+        ShieldSmart is an independent educational resource. We are not paid to
+        recommend any tool. All recommendations reflect our honest assessment
+        of usability and security.
+      </p>
+      <p class="footer-legal">
+        &copy; {{ 'now' | date: "%Y" }} {{ site.title }}.
+        Content is for educational purposes.
+      </p>
+    </div>
+
+  </div>
+</footer>

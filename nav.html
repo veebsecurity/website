@@ -1,0 +1,62 @@
+<!-- _includes/nav.html -->
+<!-- Top navigation bar with site logo, links, and mobile hamburger toggle -->
+<header class="site-header">
+  <div class="container nav-container">
+
+    <!-- Logo / wordmark -->
+    <a class="site-logo" href="{{ '/' | relative_url }}" aria-label="{{ site.title }} home">
+      <span class="logo-shield" aria-hidden="true">&#x2756;</span>
+      <span class="logo-text">{{ site.title }}</span>
+    </a>
+
+    <!-- Desktop nav links -->
+    <nav class="site-nav" aria-label="Main navigation">
+      <ul class="nav-links" role="list">
+        {% for link in site.nav_links %}
+        <li>
+          <a href="{{ link.url | relative_url }}"
+             {% if page.url == link.url or page.url contains link.url %}
+               class="nav-link active" aria-current="page"
+             {% else %}
+               class="nav-link"
+             {% endif %}>
+            {{ link.title }}
+          </a>
+        </li>
+        {% endfor %}
+        <li>
+          <a href="{{ '/tools/' | relative_url }}" class="nav-cta btn btn-primary btn-sm">
+            Browse Tools
+          </a>
+        </li>
+      </ul>
+
+      <!-- Mobile hamburger button (checkbox hack — no JS required) -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-input" aria-hidden="true">
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle menu">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </label>
+
+      <!-- Mobile menu (shown when checkbox is checked) -->
+      <div class="mobile-menu" role="dialog" aria-label="Mobile navigation">
+        <ul class="mobile-nav-links" role="list">
+          {% for link in site.nav_links %}
+          <li>
+            <a href="{{ link.url | relative_url }}" class="mobile-nav-link">
+              {{ link.title }}
+            </a>
+          </li>
+          {% endfor %}
+          <li>
+            <a href="{{ '/tools/' | relative_url }}" class="btn btn-primary" style="display:inline-block;margin-top:.5rem;">
+              Browse Tools
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+  </div>
+</header>
