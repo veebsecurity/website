@@ -1,0 +1,56 @@
+title: "ShieldSmart"
+tagline: "Simple security for real people"
+description: >-
+  ShieldSmart helps everyday people protect themselves online with practical,
+  jargon-free security tips and trusted tool recommendations.
+
+# EDIT THESE for your site:
+url: "https://yourusername.github.io"
+baseurl: ""   # set to "/repo-name" if not a user/org page
+
+author:
+  name: "ShieldSmart Team"
+  email: "hello@shieldsmart.example.com"
+
+markdown: kramdown
+highlighter: rouge
+permalink: /blog/:year/:month/:day/:title/
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  syntax_highlighter: rouge
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "ShieldSmart Team"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - .git
+  - .gitignore
+
+nav_links:
+  - title: "Tips"
+    url: "/blog/"
+  - title: "Tools"
+    url: "/tools/"
+  - title: "About"
+    url: "/about/"
